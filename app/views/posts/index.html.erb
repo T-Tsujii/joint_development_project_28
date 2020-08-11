@@ -1,6 +1,6 @@
 <%= link_to "投稿画面へ", new_post_path %>
 <% @posts.each do |post| %>
   <p>
-    <%= post.title %>
+    <%= link_to(post.title, "/posts/#{post.id}") %>
   </p>
 <% end %>

@@ -13,6 +13,7 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
+    redirect_to action: :index
   end
 
   def edit
@@ -21,12 +22,14 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
-    post.update(post_params)  
+    post.update(post_params)
+    redirect_to action: :index
   end
 
   def destroy
     post = Post.find(params[:id])
-    post.destroy  
+    post.destroy
+    redirect_to action: :index
   end
 
 

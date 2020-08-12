@@ -1,0 +1,6 @@
+<p>詳細表示</p>
+<%= link_to "一覧画面へ", posts_path %>
+<%= form_with model: @post, local: true do |f| %>
+  <p>title : <%= @post.title %></p>
+  <p>content : <%= @post.content %></p>
+<% end %>
